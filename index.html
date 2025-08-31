@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SportFashion</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Font Awesome para los íconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
     </style>
 </head>
@@ -13,14 +16,17 @@
     <div class="menu-container">
         <a href="#" class="logo">SportFashion</a>
         <nav class="navbar">
+            <!--MENU DE NAVEGACIÓN-->
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="../Views/productos.html">Productos</a></li>
-                <li><a href="../Views/presupuesto.html">Presupuesto</a></li>
-                <li><a href="../Views/contacto.html">Contacto</a></li>
-                <li><a href="../Views/galeria.html">Galeria</a></li>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="./Views/productos.html">Productos</a></li>
+                <li><a href="./Views/presupuesto.html">Presupuesto</a></li>
+                <li><a href="./Views/contacto.html">Contacto</a></li>
+                <li><a href="./Views/galeria.html">Galería</a></li>
             </ul>
-</nav>
+          </nav>
+
+  <!--SUBMENU-->
 
 <div class="submenu">
             <img src="imagenes/car.svg" id="img-carrito" alt="carrito">
@@ -40,7 +46,7 @@
             </div>
         </div>
     </div>
-
+<!--SECCION ESPECIAL-->
     <div class="header-main container">
         <div class="header-img">
             <img src="imagenes/right.png" alt="">
@@ -52,10 +58,7 @@
         </div>
     </div>
 </header>
-
-    </div>
-    </header>
-
+   
     <section class="ofert container">
         <div class="ofert-1">
             <div class="ofert-img">
@@ -89,7 +92,10 @@
         </div>
     </section>
 
-  <h2>Productos</h2>
+<!--PRODUCTOS-->
+
+<h2 class="titulo-productos">Productos</h2>
+
 
 <div class="product-content container">
 
@@ -152,10 +158,11 @@
       <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito</a>
     </div>
   </div>
-
 </div>
 
-<section class="icons container">
+<!--ICONS-->
+
+<section class="icons">
 <div class="icon-1">
     <div class="icon-img">
         <img src="imagenes/i1.svg" alt="" height="48" width="48">
@@ -181,7 +188,7 @@
     </div>
 </div>
 </section>
-
+<!--BLOGS-->
 <section class="blog container">
 <div class="blog-1">
     <img src="imagenes/b1.jpg" alt="" height="5374" width="3583">
@@ -209,22 +216,83 @@
 </div>
 </section>
 
-<footer class="footer">
-<div class="footer-content container">
-<p>&copy; 2025 SportFashion. Todos los derechos reservados.</p>
-</html>
-    <div class="link">
-        <h3>Inicio</h3>
-        <ul>
-            <li><a href="#">Quienes somos</a></li>
-            <li><a href="#">Quienes ofrecemos</a></li>
-            <li><a href="#">Nuestras Tiendas</a></li>
-            <li><a href="#">Contacto</a></li>
+<!--Noticias Json-->
 
-        </ul>
+<section class="noticias container">
+  <h2>Últimas Noticias</h2>
+  <div id="contenedor-noticias">
+    <p>Cargando noticias...</p>
+  </div>
+</section>
+
+<!--PIE DE PAGINA-->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-block">
+      <h3>Tienda de Ropa</h3>
+      <p>Moda para todos los estilos. Descubre lo último en tendencias.</p>
     </div>
-</div>
+
+    <div class="footer-block">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./Views/productos.html">Catálogo</a></li>
+        <li><a href="./Views/galeria.html">Ofertas</a></li>
+        <li><a href="./Views/contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-block">
+      <h4>Contacto</h4>
+      <p>Email: contacto@sportfashion.com</p>
+      <p>Tel: +34 657 456 789</p>
+    </div>
+
+    <div class="footer-block">
+      <h4>Síguenos</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/?locale=es_ES"><img src="./imagenes/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/"><img src="./imagenes/instagram.png" alt="Instagram"></a>
+        <a href="https://x.com/?lang=es"><img src="./imagenes/twitter.png" alt="Twitter"></a>
+      </div>
+    </div>
+
+    <div class="footer-block">
+      <h4>Mi cuenta</h4>
+      <ul>
+        <li><a href="/perfil">Perfil</a></li>
+        <li><a href="/pedidos">Mis pedidos</a></li>
+        <li><a href="/favoritos">Favoritos</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-block">
+      <h4>Ayuda</h4>
+      <ul>
+        <li><a href="/envios">Envíos</a></li>
+        <li><a href="/devoluciones">Devoluciones</a></li>
+        <li><a href="/faq">Preguntas frecuentes</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-block">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/terminos">Términos y condiciones</a></li>
+        <li><a href="/privacidad">Política de privacidad</a></li>
+        <li><a href="/cookies">Política de cookies</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Tienda de Ropa. Todos los derechos reservados.
+  </div>
 </footer>
-    <script src="..js/script.js"></script>
+
+    <script src="/js/script.js"></script>
 </body>
 </html>

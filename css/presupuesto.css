@@ -1,0 +1,154 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: #222;
+  padding: 15px 20px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #ff9800;
+}
+
+header nav a.active {
+  border-bottom: 2px solid #ff9800;
+  padding-bottom: 3px;
+}
+
+/* MAIN */
+main {
+  flex: 1; /* Esto empuja el footer hacia abajo */
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #e68a00;
+}
+
+/*FOOTER*/
+.footer {
+  background-color: #222;
+  color: #eee;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.footer-block {
+  flex: 1 1 150px;
+  min-width: 150px;
+}
+
+.footer-block h3, .footer-block h4 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-block ul li {
+  margin-bottom: 8px;
+}
+
+.footer-block ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-block ul li a:hover {
+  color: #fff;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+  filter: brightness(0.7) invert(1);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  color: #888;
+  font-size: 13px;
+}

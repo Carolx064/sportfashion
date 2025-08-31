@@ -2,105 +2,110 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carrusel de Productos</title>
-  <link rel="stylesheet" href="/css/galeria.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería de Productos</title>
+  <link rel="stylesheet" href="../css/galeria.css">
 </head>
 <body>
+  <!-- Menú de navegación -->
+  <header>
+    <div class="navbar">
+      <div class="logo">SportFashion</div>
+     <nav class="navbar">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+            </ul>
+          </nav>
+    </div>
+  </header>
 
+  <main>
     <h1>Galería de Productos</h1>
+    <section class="galeria-container">
+      <button class="arrow left" aria-label="Imagen anterior">&#10094;</button>
+      <div class="galeria" id="galeria"></div>
+      <button class="arrow right" aria-label="Imagen siguiente">&#10095;</button>
+    </section>
+  </main>
 
-  <div class="carrusel-wrapper">
-    <button class="flecha izquierda" id="prev">&#10094;</button>
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="footer-container">
 
-    <div class="carrusel-container" id="carrusel">
-      <!-- 10 productos -->
-      <div class="producto">
-        <img src="/imagenes/g-1.png" alt="Producto 1">
-        <h3>Camiseta Deportiva - Naranja</h3>
-        <p>Camiseta básica unisex de color naranja,<br>
-          confeccionada en algodón suave y transpirable. Ideal para uso diario, ofrece comodidad,<br>
-          estilo casual y un ajuste clásico. Disponible en varias tallas.<br>
-          ¡Perfecta para personalizar o llevar tal cual!</p>
-        <button>Ver más</button>
+      <div class="footer-block">
+        <h3>Tienda de Ropa</h3>
+        <p>Moda para todos los estilos. Descubre lo último en tendencias.</p>
       </div>
-      <div class="producto">
-        <img src="/imagenes/g-2.png" alt="Producto 2">
-        <h3>Camiseta Airflex</h3>
-        <p>Camibeseta basica unisex de color gris, <br>
-        Material: mezcla de poliester y algodón <br>
-        Ideal para hacer deporte o un look casual.</p>
-        <button>Ver más</button>
+
+      <div class="footer-block">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./productos.html">Catálogo</a></li>
+          <li><a href="./galeria.html" aria-current="page">Ofertas</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
       </div>
-      <div class="producto">
-        <img src="/imagenes/g-3.jpeg" alt="Producto 3">
-        <h3>Sudadera Monster</h3>
-        <p>Sudadera unisex de diseño bicolor en rojo y negro,<br>
-          confeccionada en tela suave y abrigadora. <br>
-          Destaca por su estampado frontal de una sonrisa maléfica que le da un toque rebelde y original.<br>
-          Ideal para quienes buscan estilo y personalidad en su outfit diario. <br>
-          Disponible en varias tallas.</p>
-        <button>Ver más</button>
+
+      <div class="footer-block">
+        <h4>Contacto</h4>
+        <p>Email: contacto@sportfashion.com</p>
+        <p>Tel: +34 657 456 789</p>
       </div>
-      <div class="producto">
-        <img src="/imagenes/g-4.jpeg" alt="Producto 4">
-        <h3>Zapatilla SunRush</h3>
-        <p>Zapatilla deportiva unisex con diseño moderno y vibrante.<br>
-           Su suela presenta un llamativo degradado en tonos rosa 
-           y amarillo que aporta dinamismo y estilo.<br>
-            Confeccionada con materiales ligeros y transpirables,
-             es ideal para entrenamientos,<br>
-             caminatas o looks urbanos.</p>
-        <button>Ver más</button>
+
+      <div class="footer-block">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/?locale=es_ES" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook">
+            <img src="/imagenes/facebook.png" alt="Síguenos en Facebook">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
+            <img src="/imagenes/instagram.png" alt="Síguenos en Instagram">
+          </a>
+          <a href="https://x.com/?lang=es" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en X (Twitter)">
+            <img src="/imagenes/twitter.png" alt="Síguenos en X (Twitter)">
+          </a>
+        </div>
       </div>
-      <div class="producto">
-        <img src="/imagenes/g-5.jpg" alt="Producto 5">
-        <h3>Gorra CodeX</h3>
-        <p>Gorra New Era estilo snapback en combinación de rojo y negro, <br>
-          con diseño clásico y visera plana.<br>
-          Incorpora una letra bordada personalizable al frente,<br>
-          ideal para destacar tu estilo único.<br>
-          Fabricada con materiales de alta calidad,
-          perfecta para uso diario o coleccionistas de streetwear.<br>
-          Talla ajustable.</p>
-        <button>Ver más</button>
+
+      <div class="footer-block">
+        <h4>Mi cuenta</h4>
+        <ul>
+          <li><a href="/perfil" title="Ver tu perfil personal">Perfil</a></li>
+          <li><a href="/pedidos" title="Ver tus pedidos anteriores">Mis pedidos</a></li>
+          <li><a href="/favoritos" title="Ver productos favoritos">Favoritos</a></li>
+        </ul>
       </div>
-      <div class="producto">
-        <img src="/imagenes/g-6.jpg" alt="Producto 6">
-        <h3>Pantalón Gris Aura</h3>
-        <p>Pantalón de vestir para mujer en tono gris neutro,<br>
-          con corte recto y confección de tela suave y elegante.<br>
-          Ideal para ocasiones formales o para un look de oficina sofisticado.<br>
-          Su diseño clásico y versátil lo convierte en una prenda imprescindible en cualquier guardarropa.
-          Disponible en varias tallas.</p>
-        <button>Ver más</button>
+
+      <div class="footer-block">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="/envios" title="Información sobre envíos">Envíos</a></li>
+          <li><a href="/devoluciones" title="Información sobre devoluciones">Devoluciones</a></li>
+          <li><a href="/faq" title="Preguntas frecuentes">Preguntas frecuentes</a></li>
+        </ul>
       </div>
-      <div class="producto">
-        <img src="/imagenes/g-7.jpg" alt="Producto 7">
-        <h3>Bolsa Munich MovePurpple</h3>
-        <p>Bolsa deportiva morada de la marca Munich,<br>
-          diseñada para combinar estilo y funcionalidad.<br>
-           Con amplio espacio interior, compartimentos laterales
-           y correas ajustables para mayor comodidad.<br>
-           Ideal para llevar al gimnasio, entrenamientos o escapadas de fin de semana.<br>
-            Resistente, moderna y con el sello de calidad Munich.</p>
-        <button>Ver más</button>
+
+      <div class="footer-block">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/terminos" title="Lee nuestros términos y condiciones">Términos y condiciones</a></li>
+          <li><a href="/privacidad" title="Consulta nuestra política de privacidad">Política de privacidad</a></li>
+          <li><a href="/cookies" title="Lee cómo usamos cookies en nuestro sitio">Política de cookies</a></li>
+        </ul>
       </div>
-      <div class="producto">
-        <img src="/imagenes/g-8.jpg" alt="Producto 8">
-        <h3>Producto 10</h3>
-        <p>Sudadera unisex de color azul, 
-          confeccionada con 100% algodón,
-           con una suave tela acojedora para abrigarte. 
-           Ideal para un outfit urbano. Disponible en varias tallas.
-        </p>
-        <button>Ver más</button>
-      </div>
+
     </div>
 
-    <button class="flecha derecha" id="next">&#10095;</button>
-  </div>
+    <div class="footer-bottom">
+      © 2025 Tienda de Ropa. Todos los derechos reservados.
+    </div>
+  </footer>
 
-  <script src="/js/carrusel.js"></script>
+  <script src="../js/galeria.js"></script>
 </body>
 </html>

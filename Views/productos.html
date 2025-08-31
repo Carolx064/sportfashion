@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SportFashion - Productos</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
@@ -11,17 +11,19 @@
   <header class="header">
     <div class="menu-container">
       <a href="#" class="logo">SportFashion</a>
-      <nav class="navbar">
-        <ul>
-              <li><a href="../index.html">Inicio</a></li>
-              <li><a href="galeria.html">Galeria</a></li>
-              <li><a href="presupuesto.html">Presupuesto</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+        <nav class="navbar">
+            <!--MENU DE NAVEGACIÓN-->
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="/Views/productos.html">Productos</a></li>
+                <li><a href="/Views/presupuesto.html">Presupuesto</a></li>
+                <li><a href="/Views/contacto.html">Contacto</a></li>
+                <li><a href="/Views/galeria.html">Galería</a></li>
+            </ul>
+          </nav>
     </div>
   </header>
-  
+
   <main class="products container" id="lista-1">
     <h2>Productos</h2>
 
@@ -31,7 +33,7 @@
         <img src="../imagenes/1.png" alt="Polo azul">
         <div class="product-txt">
           <h3>Polo azul</h3>
-          <p>La mejor Calidad</p>
+          <p>La mejor calidad</p>
           <p class="precio">67,25€</p>
           <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
         </div>
@@ -58,7 +60,7 @@
       </div>
 
       <div class="product">
-        <img src="../imagenes/4.png" alt="Polo azul">
+        <img src="../imagenes/4.png" alt="Polo azul 2">
         <div class="product-txt">
           <h3>Polo azul</h3>
           <p>Calidad Premium</p>
@@ -89,9 +91,74 @@
 
     </div>
   </main>
-<footer>
-    <p>&copy; 2025 SportFashion. Todos los derechos reservados.</p>
+
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-block">
+        <h3>Tienda de Ropa</h3>
+        <p>Moda para todos los estilos. Descubre lo último en tendencias.</p>
+      </div>
+
+      <div class="footer-block">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Catálogo</a></li>
+          <li><a href="galeria.html">Ofertas</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-block">
+        <h4>Contacto</h4>
+        <p>Email: contacto@sportfashion.com</p>
+        <p>Tel: +34 657 456 789</p>
+      </div>
+
+      <div class="footer-block">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/?locale=es_ES"><img src="../imagenes/facebook.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/"><img src="../imagenes/instagram.png" alt="Instagram"></a>
+          <a href="https://x.com/?lang=es"><img src="../imagenes/twitter.png" alt="Twitter"></a>
+        </div>
+      </div>
+
+      <div class="footer-block">
+        <h4>Mi cuenta</h4>
+        <ul>
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Mis pedidos</a></li>
+          <li><a href="#">Favoritos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-block">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">Envíos</a></li>
+          <li><a href="#">Devoluciones</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-block">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Política de cookies</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Tienda de Ropa. Todos los derechos reservados.
+    </div>
   </footer>
+
+  <script src="../js/script.js"></script>
 </body>
 </html>
-

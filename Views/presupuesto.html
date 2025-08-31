@@ -1,43 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario SportFashion</title>
-  <link rel="stylesheet" href="../css/formulario.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/presupuesto.css" />
+  <title>Formulario de Solicitud</title>
 </head>
 <body>
-   <header class="header">
-    <div class="menu-container">
-      <a href="#" class="logo">SportFashion</a>
-      <nav class="navbar">
-      <img src="../imagenes/menu.png" class="menu-icono" id="menu-icono" alt="menu">
-    <nav class="navbar">
-    <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="galeria.html">Galeria</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-</nav>
-<img src="../imagenes/menu.png" class="menu-icono" id="menu-icono" alt="menu">
-
-      </nav>
-    </div>
+  <header>
+  <nav class="navbar">
+            <!--MENU DE NAVEGACIÓN-->
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="../Views/productos.html">Productos</a></li>
+                <li><a href="../Views/presupuesto.html">Presupuesto</a></li>
+                <li><a href="../Views/contacto.html">Contacto</a></li>
+                <li><a href="../Views/galeria.html">Galería</a></li>
+            </ul>
+          </nav>
   </header>
 
-<section class="form-register"> 
-  <h4>Formulario SportFashion</h4>
-  <input class="controles" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
-  <input class="controles" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su apellido">
-  <input class="controles" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
-  <input class="controles" type="password" name="nombres" id="nombres" placeholder="Ingrese su contraseña">
-  <p>Estoy de acurdo con <a href="#"> Terminos y Condiciones </a></p>
-  <input class="botones" type="submit" value="Registrar">
-  <p><a href="#">¿Ya tienes cuenta?</a></p>
-</section>
+  <form id="formulario" name="formulario" method="post" action="/procesar-formulario">
+    <fieldset>
+      <legend>Datos Personales</legend>
+      <div>
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" placeholder="Escriba su Nombre" required />
+      </div>
 
+      <div>
+        <label for="Apellido">Apellido:</label>
+        <input type="text" id="Apellido" name="Apellido" placeholder="Escriba su Apellido" required />
+      </div>
 
+      <div>
+        <label for="contacto">Teléfono de contacto:</label>
+        <input type="text" id="contacto" name="contacto" placeholder="Escriba su contacto" required />
+      </div>
+
+      <div>
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="Escriba su correo" required />
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Presupuesto</legend>
+      <div>
+        <label for="producto">Selecciona un producto:</label>
+        <select id="producto" name="producto" required>
+          <option value="" disabled selected>Seleccionar una prenda</option>
+          <option value="camiseta">Camiseta</option>
+          <option value="pantalon">Pantalón</option>
+          <option value="zapatos">Zapatos</option>
+          <option value="gorro">Complementos</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="plazo">Plazo en meses:</label>
+        <input type="number" id="plazo" name="plazo" min="1" max="24" required />
+      </div>
+
+      <div>
+        <label>Elija los extras para el producto:</label><br />
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="extras" value="color" /> Color Personalizado</label>
+          <label><input type="checkbox" name="extras" value="tipografia" /> Tipografía personalizada</label>
+          <label><input type="checkbox" name="extras" value="terminacion" /> Terminación personalizada</label>
+          <label><input type="checkbox" name="extras" value="nombre" /> Nombre personalizado</label>
+        </div>
+      </div><br />
+
+      <div>
+        <label for="presupuesto">Presupuesto estimado:</label>
+        <input type="number" id="presupuesto" name="presupuesto" min="0" step="0.01" />
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><strong>Aceptación condiciones y envío de presupuesto</strong></legend>
+      <label>
+        <input type="checkbox" name="condiciones" required />
+        He leído la política de privacidad
+      </label><br /><br />
+
+      <input type="submit" value="Enviar formulario" />
+    </fieldset>
+  </form>
+
+<!--PIE DE PAGINA-->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-block">
+      <h3>Tienda de Ropa</h3>
+      <p>Moda para todos los estilos. Descubre lo último en tendencias.</p>
+    </div>
+
+    <div class="footer-block">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./Views/productos.html">Catálogo</a></li>
+        <li><a href="./Views/galeria.html">Ofertas</a></li>
+        <li><a href="./Views/contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-block">
+      <h4>Contacto</h4>
+      <p>Email: contacto@sportfashion.com</p>
+      <p>Tel: +34 657 456 789</p>
+    </div>
+
+    <div class="footer-block">
+      <h4>Síguenos</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/?locale=es_ES"><img src="/imagenes/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/"><img src="/imagenes/instagram.png" alt="Instagram"></a>
+        <a href="https://x.com/?lang=es"><img src="/imagenes/twitter.png" alt="Twitter"></a>
+      </div>
+    </div>
+
+    <div class="footer-block">
+      <h4>Mi cuenta</h4>
+      <ul>
+        <li><a href="/perfil">Perfil</a></li>
+        <li><a href="/pedidos">Mis pedidos</a></li>
+        <li><a href="/favoritos">Favoritos</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-block">
+      <h4>Ayuda</h4>
+      <ul>
+        <li><a href="/envios">Envíos</a></li>
+        <li><a href="/devoluciones">Devoluciones</a></li>
+        <li><a href="/faq">Preguntas frecuentes</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-block">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/terminos">Términos y condiciones</a></li>
+        <li><a href="/privacidad">Política de privacidad</a></li>
+        <li><a href="/cookies">Política de cookies</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Tienda de Ropa. Todos los derechos reservados.
+  </div>
+</footer>
+  <script src="../js/script.js"></script>
 </body>
 </html>
-

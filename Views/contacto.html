@@ -5,9 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contacto - SportFashion</title>
   <link rel="stylesheet" href="../css/contacto.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
 </head>
 <body>
-
+  <header class="header">
+    <div class="menu-container">
+      <a href="../index.html" class="logo">SportFashion</a>
+        <nav class="navbar">
+            <!--MENU DE NAVEGACIÓN-->
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="../Views/productos.html">Productos</a></li>
+                <li><a href="../Views/presupuesto.html">Presupuesto</a></li>
+                <li><a href="../Views/contacto.html">Contacto</a></li>
+                <li><a href="../Views/galeria.html">Galería</a></li>
+            </ul>
+          </nav>
+    </div>
+  </header>
+  <!-- Contacto -->
   <section class="contacto-container">
     <div class="contacto-info">
       <h2>Contáctanos</h2>
@@ -15,13 +35,14 @@
       <ul>
         <li><strong>Correo:</strong> contacto@sportfashion.com</li>
         <li><strong>Teléfono:</strong> +34 657 456 789</li>
-        <li><strong>Dirección:</strong> Calle Moda 327, Valencia, España</li>
+        <li><strong>Dirección:</strong> Calle Colon 27, Valencia, España</li>
       </ul>
     </div>
- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.903155043813!2d-0.49135012363354424!3d39.47151651262473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60503c6905e429%3A0x86cea16515a6f00a!2sCentro%20Comercial%20Bonaire!5e0!3m2!1ses!2ses!4v1752239281147!5m2!1ses!2ses" 
- width="400" 
- height="300">
-</iframe>
+    
+<!-- Mapa de la tienda -->
+<div id="map" style="height: 500px;"></div>
+
+<!--Formulario-->
     <div class="contacto-form">
       <form action="#" method="post">
         <label for="nombre">Nombre</label>
@@ -37,8 +58,73 @@
       </form>
     </div>
   </section>
-<footer>
-    <p>&copy; 2025 SportFashion. Todos los derechos reservados.</p>
-  </footer>
+
+<!--PIE DE PAGINA-->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-block">
+      <h3>Tienda de Ropa</h3>
+      <p>Moda para todos los estilos. Descubre lo último en tendencias.</p>
+    </div>
+
+    <div class="footer-block">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./Views/productos.html">Catálogo</a></li>
+        <li><a href="./Views/galeria.html">Ofertas</a></li>
+        <li><a href="./Views/contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-block">
+      <h4>Contacto</h4>
+      <p>Email: contacto@sportfashion.com</p>
+      <p>Tel: +34 657 456 789</p>
+    </div>
+
+    <div class="footer-block">
+      <h4>Síguenos</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/?locale=es_ES"><img src="/imagenes/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/"><img src="/imagenes/instagram.png" alt="Instagram"></a>
+        <a href="https://x.com/?lang=es"><img src="/imagenes/twitter.png" alt="Twitter"></a>
+      </div>
+    </div>
+
+    <div class="footer-block">
+      <h4>Mi cuenta</h4>
+      <ul>
+        <li><a href="/perfil">Perfil</a></li>
+        <li><a href="/pedidos">Mis pedidos</a></li>
+        <li><a href="/favoritos">Favoritos</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-block">
+      <h4>Ayuda</h4>
+      <ul>
+        <li><a href="/envios">Envíos</a></li>
+        <li><a href="/devoluciones">Devoluciones</a></li>
+        <li><a href="/faq">Preguntas frecuentes</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-block">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/terminos">Términos y condiciones</a></li>
+        <li><a href="/privacidad">Política de privacidad</a></li>
+        <li><a href="/cookies">Política de cookies</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Tienda de Ropa. Todos los derechos reservados.
+  </div>
+</footer>
+  <script src="/js/mapa.js"></script>
 </body>
 </html>

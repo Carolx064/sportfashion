@@ -1,46 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const contenedor = document.getElementById("contenedor-noticias");
-
-  // Verifica que el contenedor existe
-  if (!contenedor) return;
-
-  // Cargar noticias desde un archivo JSON externo
-  fetch("noticias.json")
-    .then(function (response) {
-      if (!response.ok) {
-        throw new Error("No se pudo cargar el archivo de noticias.");
-      }
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("/data/noticias.json")
+    .then(response => {
+      if (!response.ok) throw new Error("Error al cargar el archivo JSON");
       return response.json();
     })
-    .then(function (noticias) {
-      noticias.forEach(function (noticia) {
-        const noticiaDiv = document.createElement("div");
-        noticiaDiv.classList.add("noticia");
+    .then(noticias => {
+      const contenedor = document.getElementById("contenedor-noticias");
+      contenedor.innerHTML = "";
 
-        // Sanitizar contenido insertado con innerText (mejor que innerHTML si no hay HTML embebido)
-        const titulo = document.createElement("h3");
-        titulo.textContent = noticia.titulo;
+      noticias.forEach((noticia, index) => {
+        const div = document.createElement("div");
+        div.classList.add("noticia");
+        div.innerHTML = `
+          <h3>${noticia.titulo}</h3>
+          <p>${noticia.contenido}</p>
+        `;
 
-        const contenido = document.createElement("p");
-        contenido.textContent = noticia.contenido;
+        // Delay para animación escalonada
+        div.style.animationDelay = `${index * 0.2}s`;
 
-        noticiaDiv.appendChild(titulo);
-        noticiaDiv.appendChild(contenido);
-        contenedor.appendChild(noticiaDiv);
+        contenedor.appendChild(div);
       });
     })
-    .catch(function (error) {
-      console.error("Error cargando noticias:", error.message);
+    .catch(error => {
+      console.error("Error al cargar las noticias:", error);
+      const contenedor = document.getElementById("contenedor-noticias");
+      contenedor.innerHTML = "<p>No se pudieron cargar las noticias.</p>";
     });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const menuIcono = document.getElementById("menu-icono");
-  const navbarLista = document.querySelector(".navbar ul");
-
-  if (menuIcono && navbarLista) {
-    menuIcono.addEventListener("click", function () {
-      navbarLista.classList.toggle("active");
-    });
-  }
 });
