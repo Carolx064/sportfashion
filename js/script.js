@@ -1,30 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("data/noticias.json")
-    .then(response => {
-      if (!response.ok) throw new Error("Error al cargar el archivo JSON");
-      return response.json();
-    })
-    .then(noticias => {
-      const contenedor = document.getElementById("contenedor-noticias");
-      contenedor.innerHTML = "";
+// script.js
 
-      noticias.forEach((noticia, index) => {
-        const div = document.createElement("div");
-        div.classList.add("noticia");
-        div.innerHTML = `
-          <h3>${noticia.titulo}</h3>
-          <p>${noticia.contenido}</p>
-        `;
+const RUTA_JSON = '../data/noticias.json';
 
-        // Delay para animación escalonada
-        div.style.animationDelay = `${index * 0.2}s`;
+async function cargarNoticias() {
+  try {
+    const respuesta = await fetch(RUTA_JSON);
 
-        contenedor.appendChild(div);
-      });
-    })
-    .catch(error => {
-      console.error("Error al cargar las noticias:", error);
-      const contenedor = document.getElementById("contenedor-noticias");
-      contenedor.innerHTML = "<p>No se pudieron cargar las noticias.</p>";
-    });
-});
+    if (!respuesta.ok) {
+      throw new Error(`No se pudo cargar el archivo (${respuesta.status} ${respuesta.statusText})`);
+    }
+
+    const noticias = await respuesta.json();
+    console.log('Noticias cargadas:', noticias);
+    mostrarNoticias(noticias);
+
+  } catch (error) {
+    console.error('Error al cargar las noticias:', error);
+    mostrarErrorEnPantalla('No se pudieron cargar las noticias. Verifica que el archivo exista en "data/noticias.json".');
+  }
+}
+
+function mostrarNoticias(noticias) {
+  const contenedor = document.getElementById('contenedor-noticias');
+  contenedor.innerHTML = '';
+
+  noticias.forEach(noticia => {
+    const item = document.createElement('div');
+    item.classList.add('noticia');
+    item.innerHTML = `
+      <h3>${noticia.titulo}</h3>
+      <p>${noticia.contenido}</p>
+    `;
+    contenedor.appendChild(item);
+  });
+}
+
+function mostrarErrorEnPantalla(mensaje) {
+  const contenedor = document.getElementById('contenedor-noticias');
+  contenedor.innerHTML = `<p style="color:red;">${mensaje}</p>`;
+}
+
+cargarNoticias();
