@@ -4,171 +4,167 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/presupuesto.css" />
-  <title>Formulario de Solicitud</title>
+  <title>Formulario de Solicitud - SportFashion</title>
 </head>
 <body>
-  <header>
-  <nav class="navbar">
-            <!--MENU DE NAVEGACIÓN-->
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="presupuesto.html">Presupuesto</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-            </ul>
-          </nav>
-  </header>
-  
-  <form id="formulario" name="formulario" method="post" action="/procesar-formulario">
-  <fieldset>
-    <legend>Datos Personales</legend>
 
-    <div>
-      <label for="Nombre">Nombre:</label>
-      <input type="text" id="Nombre" name="Nombre" placeholder="Escriba su Nombre"
-             required 
-             pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,40}" 
-             title="El nombre solo puede contener letras y espacios (2-40 caracteres)" />
-    </div>
+<!-- CABECERA -->
+<header class="header">
+  <a href="../index.html" class="logo">
+    <img src="../imagenes/logo.png" alt="Logo SportFashion">
+  </a>
 
-    <div>
-      <label for="Apellido">Apellido:</label>
-      <input type="text" id="Apellido" name="Apellido" placeholder="Escriba su Apellido"
-             required 
-             pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,40}" 
-             title="El apellido solo puede contener letras y espacios (2-40 caracteres)" />
-    </div>
+  <nav class="navbar" role="navigation" aria-label="Menú principal">
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <div>
-      <label for="contacto">Teléfono de contacto:</label>
-      <input type="text" id="contacto" name="contacto" placeholder="Escriba su contacto"
-             required 
-             pattern="[0-9]{9}" 
-             title="El teléfono debe contener 9 dígitos" />
-    </div>
+<!-- FORMULARIO -->
+<main>
+  <form id="formulario" name="formulario" method="post" action="#">
+    <fieldset>
+      <legend>Datos Personales</legend>
 
-    <div>
-      <label for="correo">Correo Electrónico:</label>
-      <input type="email" id="correo" name="correo" placeholder="Escriba su correo"
-             required 
-             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" 
-             title="Introduce un correo válido, por ejemplo usuario@dominio.com" />
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <legend>Presupuesto</legend>
-    <div>
-      <label for="producto">Selecciona un producto:</label>
-      <select id="producto" name="producto" required>
-        <option value="" disabled selected>Seleccionar una prenda</option>
-        <option value="camiseta">Camiseta</option>
-        <option value="pantalon">Pantalón</option>
-        <option value="zapatos">Zapatos</option>
-        <option value="gorro">Complementos</option>
-      </select>
-    </div>
-
-    <div>
-      <label for="plazo">Plazo en meses:</label>
-      <input type="number" id="plazo" name="plazo" min="1" max="24" required />
-    </div>
-
-    <div>
-      <label>Elija los extras para el producto:</label><br />
-      <div class="checkbox-group">
-        <label><input type="checkbox" name="extras" value="color" /> Color Personalizado</label>
-        <label><input type="checkbox" name="extras" value="tipografia" /> Tipografía personalizada</label>
-        <label><input type="checkbox" name="extras" value="terminacion" /> Terminación personalizada</label>
-        <label><input type="checkbox" name="extras" value="nombre" /> Nombre personalizado</label>
+      <div>
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" placeholder="Escriba su Nombre"
+               required 
+               pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,40}" 
+               title="El nombre solo puede contener letras y espacios (2-40 caracteres)" />
       </div>
-    </div><br />
 
-    <div>
-      <label for="presupuesto">Presupuesto estimado:</label>
-      <input type="number" id="presupuesto" name="presupuesto" min="0" step="0.01" />
-    </div>
-  </fieldset>
+      <div>
+        <label for="Apellido">Apellido:</label>
+        <input type="text" id="Apellido" name="Apellido" placeholder="Escriba su Apellido"
+               required 
+               pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,40}" 
+               title="El apellido solo puede contener letras y espacios (2-40 caracteres)" />
+      </div>
 
-  <fieldset>
-    <legend><strong>Aceptación condiciones y envío de presupuesto</strong></legend>
-    <label>
-      <input type="checkbox" name="condiciones" required />
-      He leído la política de privacidad
-    </label><br /><br />
+      <div>
+        <label for="contacto">Teléfono de contacto:</label>
+        <input type="text" id="contacto" name="contacto" placeholder="Escriba su contacto"
+               required 
+               pattern="[0-9]{9}" 
+               title="El teléfono debe contener 9 dígitos" />
+      </div>
 
-    <input type="submit" value="Enviar formulario" />
-  </fieldset>
-</form>
+      <div>
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="Escriba su correo"
+               required 
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" 
+               title="Introduce un correo válido, por ejemplo usuario@dominio.com" />
+      </div>
+    </fieldset>
 
+    <fieldset>
+      <legend>Presupuesto</legend>
 
-<!--PIE DE PAGINA-->
+      <div>
+        <label for="producto">Selecciona un producto:</label>
+        <select id="producto" name="producto" required>
+          <option value="" disabled selected>Seleccionar una prenda</option>
+          <option value="camiseta">Camiseta</option>
+          <option value="pantalon">Pantalón</option>
+          <option value="zapatos">Zapatos</option>
+          <option value="gorro">Complementos</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="plazo">Plazo en meses:</label>
+        <input type="number" id="plazo" name="plazo" min="1" max="24" required />
+      </div>
+
+      <div>
+        <label>Elija los extras para el producto:</label><br />
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="extras" value="color" /> Color Personalizado</label>
+          <label><input type="checkbox" name="extras" value="tipografia" /> Tipografía personalizada</label>
+          <label><input type="checkbox" name="extras" value="terminacion" /> Terminación personalizada</label>
+          <label><input type="checkbox" name="extras" value="nombre" /> Nombre personalizado</label>
+        </div>
+      </div><br />
+
+      <div>
+        <label for="presupuesto">Presupuesto estimado:</label>
+        <input type="number" id="presupuesto" name="presupuesto" min="0" step="0.01" />
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><strong>Aceptación condiciones y envío de presupuesto</strong></legend>
+      <label>
+        <input type="checkbox" name="condiciones" required />
+        He leído la política de privacidad
+      </label><br /><br />
+
+      <input type="submit" value="Enviar formulario" />
+    </fieldset>
+  </form>
+  <div id="resultado" style="margin-top:20px;"></div>
+</main>
+
+<!-- PIE DE PÁGINA -->
 <footer class="footer">
   <div class="footer-container">
-    
     <div class="footer-block">
-      <h3>Tienda de Ropa</h3>
+      <h3>SportFashion</h3>
       <p>Moda para todos los estilos. Descubre lo último en tendencias.</p>
     </div>
 
     <div class="footer-block">
       <h4>Enlaces</h4>
       <ul>
-        <li><a href="./index.html">Inicio</a></li>
-        <li><a href="./Views/productos.html">Catálogo</a></li>
-        <li><a href="./Views/galeria.html">Ofertas</a></li>
-        <li><a href="./Views/contacto.html">Contacto</a></li>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
-    </div>
-
-    <div class="footer-block">
-      <h4>Contacto</h4>
-      <p>Email: contacto@sportfashion.com</p>
-      <p>Tel: +34 657 456 789</p>
     </div>
 
     <div class="footer-block">
       <h4>Síguenos</h4>
       <div class="social-icons">
-        <a href="https://www.facebook.com/?locale=es_ES"><img src="/imagenes/facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/"><img src="/imagenes/instagram.png" alt="Instagram"></a>
-        <a href="https://x.com/?lang=es"><img src="/imagenes/twitter.png" alt="Twitter"></a>
+        <a href="https://www.facebook.com/?locale=es_ES" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook">
+          <img src="../imagenes/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
+          <img src="../imagenes/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/?lang=es" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en X (Twitter)">
+          <img src="../imagenes/twitter.png" alt="Twitter">
+        </a>
       </div>
     </div>
 
     <div class="footer-block">
-      <h4>Mi cuenta</h4>
-      <ul>
-        <li><a href="/perfil">Perfil</a></li>
-        <li><a href="/pedidos">Mis pedidos</a></li>
-        <li><a href="/favoritos">Favoritos</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-block">
-      <h4>Ayuda</h4>
-      <ul>
-        <li><a href="/envios">Envíos</a></li>
-        <li><a href="/devoluciones">Devoluciones</a></li>
-        <li><a href="/faq">Preguntas frecuentes</a></li>
-      </ul>
+      <h4>Contacto</h4>
+      <p>Av. de Pio XII, 2, Valencia<br/>Email: <a href="mailto:info@sportfashion.es">info@sportfashion.es</a></p>
     </div>
 
     <div class="footer-block">
       <h4>Legal</h4>
       <ul>
-        <li><a href="/terminos">Términos y condiciones</a></li>
-        <li><a href="/privacidad">Política de privacidad</a></li>
-        <li><a href="/cookies">Política de cookies</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
       </ul>
     </div>
   </div>
 
   <div class="footer-bottom">
-    © 2025 Tienda de Ropa. Todos los derechos reservados.
+    © 2025 SportFashion. Todos los derechos reservados.
   </div>
 </footer>
-  <script src="../js/script.js"></script>
+
+<script src="../js/presupuesto.js"></script>
+<script src="../js/nav.js"></script>
 </body>
 </html>

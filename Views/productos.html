@@ -1,164 +1,153 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SportFashion - Productos</title>
-  <link rel="stylesheet" href="../css/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportFashion - Productos</title>
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
 
-  <header class="header">
+<!-- MENU DE NAVEGACIÓN -->
+<header class="header">
     <div class="menu-container">
-      <a href="#" class="logo">SportFashion</a>
-        <nav class="navbar">
-            <!--MENU DE NAVEGACIÓN-->
+        <a href="../index.html" class="logo">
+            <img src="../imagenes/logo.png" alt="Logo SportFashion">
+        </a>
+
+        <nav class="navbar" role="navigation" aria-label="Menú principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
+                <li><a href="productos.html" class="active">Productos</a></li>
                 <li><a href="presupuesto.html">Presupuesto</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="galeria.html">Galería</a></li>
             </ul>
-          </nav>
-    </div>
-  </header>
+        </nav>
 
-  <main class="products container" id="lista-1">
-    <h2>Productos</h2>
+        <!-- Carrito -->
+        <div class="submenu">
+            <img src="../imagenes/car.svg" id="img-carrito" alt="Carrito de compras">
+            <span id="contador-carrito">0</span>
+            <div id="carrito">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <p id="total-carrito">Total: 0,00 €</p>
+                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- PRODUCTOS -->
+<main class="products container" id="lista-1">
+    <h2 class="titulo-productos">Productos</h2>
 
     <div class="product-content">
+        <article class="product">
+            <div class="product-top">
+                <img src="../imagenes/1.png" alt="Polo azul">
+            </div>
+            <div class="product-txt">
+                <h3>Polo azul</h3>
+                <p>La mejor calidad</p>
+                <p class="precio">67,25€</p>
+                <button class="agregar-carrito" data-id="1" aria-label="Agregar Polo azul al carrito">
+                    <img src="../imagenes/cart.png" alt="Agregar al carrito">
+                </button>
+            </div>
+        </article>
 
-      <div class="product">
-        <img src="../imagenes/1.png" alt="Polo azul">
-        <div class="product-txt">
-          <h3>Polo azul</h3>
-          <p>La mejor calidad</p>
-          <p class="precio">67,25€</p>
-          <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
-        </div>
-      </div>
+        <article class="product">
+            <div class="product-top">
+                <img src="../imagenes/2.png" alt="Chaqueta invierno">
+            </div>
+            <div class="product-txt">
+                <h3>Chaqueta de invierno</h3>
+                <p>Chaqueta de montaña para la nieve</p>
+                <p class="precio">67,25€</p>
+                <button class="agregar-carrito" data-id="2" aria-label="Agregar Chaqueta de invierno al carrito">
+                    <img src="../imagenes/cart.png" alt="Agregar al carrito">
+                </button>
+            </div>
+        </article>
 
-      <div class="product">
-        <img src="../imagenes/2.png" alt="Chaqueta Invierno">
-        <div class="product-txt">
-          <h3>Chaqueta Invierno</h3>
-          <p>Chaqueta para la montaña</p>
-          <p class="precio">39,99€</p>
-          <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar al carrito</a>
-        </div>
-      </div>
+        <article class="product">
+            <div class="product-top">
+                <img src="../imagenes/3.png" alt="Chaqueta Mujer">
+            </div>
+            <div class="product-txt">
+                <h3>Chaqueta para mujer</h3>
+                <p>Chaqueta con forro nórdico</p>
+                <p class="precio">67,25€</p>
+                <button class="agregar-carrito" data-id="3" aria-label="Agregar Chaqueta para mujer al carrito">
+                    <img src="../imagenes/cart.png" alt="Agregar al carrito">
+                </button>
+            </div>
+        </article>
 
-      <div class="product">
-        <img src="../imagenes/3.png" alt="Chaqueta Mujer">
-        <div class="product-txt">
-          <h3>Chaqueta Mujer</h3>
-          <p>Chaqueta de pelo para mujer</p>
-          <p class="precio">200€</p>
-          <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar al carrito</a>
-        </div>
-      </div>
-
-      <div class="product">
-        <img src="../imagenes/4.png" alt="Polo azul 2">
-        <div class="product-txt">
-          <h3>Polo azul</h3>
-          <p>Calidad Premium</p>
-          <p class="precio">42,60€</p>
-          <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar al carrito</a>
-        </div>
-      </div>
-
-      <div class="product">
-        <img src="../imagenes/5.png" alt="Camisa negra">
-        <div class="product-txt">
-          <h3>Camisa negra</h3>
-          <p>Calidad Premium</p>
-          <p class="precio">47,99€</p>
-          <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar al carrito</a>
-        </div>
-      </div>
-
-      <div class="product">
-        <img src="../imagenes/6.png" alt="Albornoz unisex">
-        <div class="product-txt">
-          <h3>Albornoz unisex</h3>
-          <p>Abrigo de estar en casa</p>
-          <p class="precio">200€</p>
-          <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito</a>
-        </div>
-      </div>
-
+        <!-- 🔽 Agrega más productos aquí -->
     </div>
-  </main>
+</main>
 
-  <footer class="footer">
+<!-- PIE DE PÁGINA -->
+<footer class="footer">
     <div class="footer-container">
-      
-      <div class="footer-block">
-        <h3>Tienda de Ropa</h3>
-        <p>Moda para todos los estilos. Descubre lo último en tendencias.</p>
-      </div>
-
-      <div class="footer-block">
-        <h4>Enlaces</h4>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="productos.html">Catálogo</a></li>
-          <li><a href="galeria.html">Ofertas</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-block">
-        <h4>Contacto</h4>
-        <p>Email: contacto@sportfashion.com</p>
-        <p>Tel: +34 657 456 789</p>
-      </div>
-
-      <div class="footer-block">
-        <h4>Síguenos</h4>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/?locale=es_ES"><img src="../imagenes/facebook.png" alt="Facebook"></a>
-          <a href="https://www.instagram.com/"><img src="../imagenes/instagram.png" alt="Instagram"></a>
-          <a href="https://x.com/?lang=es"><img src="../imagenes/twitter.png" alt="Twitter"></a>
+        <div class="footer-block">
+            <h3>SportFashion</h3>
+            <p>Moda para todos los estilos. Descubre lo último en tendencias.</p>
         </div>
-      </div>
 
-      <div class="footer-block">
-        <h4>Mi cuenta</h4>
-        <ul>
-          <li><a href="#">Perfil</a></li>
-          <li><a href="#">Mis pedidos</a></li>
-          <li><a href="#">Favoritos</a></li>
-        </ul>
-      </div>
+        <div class="footer-block">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
 
-      <div class="footer-block">
-        <h4>Ayuda</h4>
-        <ul>
-          <li><a href="#">Envíos</a></li>
-          <li><a href="#">Devoluciones</a></li>
-          <li><a href="#">Preguntas frecuentes</a></li>
-        </ul>
-      </div>
+        <div class="footer-block">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <img src="../imagenes/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="../imagenes/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+                    <img src="../imagenes/twitter.png" alt="X">
+                </a>
+            </div>
+        </div>
 
-      <div class="footer-block">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#">Términos y condiciones</a></li>
-          <li><a href="#">Política de privacidad</a></li>
-          <li><a href="#">Política de cookies</a></li>
-        </ul>
-      </div>
-
+        <div class="footer-block">
+            <h4>Contacto</h4>
+            <address>
+                Av. de Pio XII, 2, Valencia<br/>
+                Email: <a href="mailto:info@sportfashion.es">info@sportfashion.es</a>
+            </address>
+        </div>
     </div>
 
     <div class="footer-bottom">
-      © 2025 Tienda de Ropa. Todos los derechos reservados.
+        © 2025 SportFashion. Todos los derechos reservados.
     </div>
-  </footer>
+</footer>
 
-  <script src="../js/script.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/nav.js"></script>
 </body>
 </html>

@@ -8,21 +8,35 @@
 </head>
 <body>
   <!-- Menú de navegación -->
-  <header>
-    <div class="navbar">
-      <div class="logo">SportFashion</div>
-     <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="presupuesto.html">Presupuesto</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-            </ul>
-          </nav>
-    </div>
-  </header>
+  <header class="header">
+    <div class="menu-container">
+      <a href="../index.html" class="logo">
+        <img src="../imagenes/logo.png" alt="Logo SportFashion">
+      </a>
+      <nav class="navbar" role="navigation" aria-label="Menú principal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="presupuesto.html">Presupuesto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="galeria.html" class="active">Galería</a></li>
+        </ul>
+      </nav>
 
+      <!-- 🛒 Carrito en la parte superior derecha -->
+      <div class="cart-container">
+        <span id="cart-icon">🛒 Carrito:</span>
+        <span id="cart-total">0 €</span>
+        <div class="cart-dropdown" id="cart-dropdown">
+          <h4>Mi carrito</h4>
+          <ul id="cart-items"></ul>
+          <p class="cart-sum">Total: <span id="cart-sum">0 €</span></p>
+        </div>
+      </div>
+    </div>
+  </header> 
+
+  <!-- Galeria -->
   <main>
     <h1>Galería de Productos</h1>
     <section class="galeria-container">
@@ -35,77 +49,44 @@
   <!-- PIE DE PÁGINA -->
   <footer class="footer">
     <div class="footer-container">
-
       <div class="footer-block">
-        <h3>Tienda de Ropa</h3>
+        <h3>SportFashion</h3>
         <p>Moda para todos los estilos. Descubre lo último en tendencias.</p>
       </div>
 
       <div class="footer-block">
         <h4>Enlaces</h4>
         <ul>
-          <li><a href="./index.html">Inicio</a></li>
-          <li><a href="./productos.html">Catálogo</a></li>
-          <li><a href="./galeria.html" aria-current="page">Ofertas</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="galeria.html" class="active">Galería</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
 
       <div class="footer-block">
         <h4>Contacto</h4>
-        <p>Email: contacto@sportfashion.com</p>
-        <p>Tel: +34 657 456 789</p>
-      </div>
-
-      <div class="footer-block">
-        <h4>Síguenos</h4>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/?locale=es_ES" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook">
-            <img src="/imagenes/facebook.png" alt="Síguenos en Facebook">
-          </a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
-            <img src="/imagenes/instagram.png" alt="Síguenos en Instagram">
-          </a>
-          <a href="https://x.com/?lang=es" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en X (Twitter)">
-            <img src="/imagenes/twitter.png" alt="Síguenos en X (Twitter)">
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-block">
-        <h4>Mi cuenta</h4>
-        <ul>
-          <li><a href="/perfil" title="Ver tu perfil personal">Perfil</a></li>
-          <li><a href="/pedidos" title="Ver tus pedidos anteriores">Mis pedidos</a></li>
-          <li><a href="/favoritos" title="Ver productos favoritos">Favoritos</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-block">
-        <h4>Ayuda</h4>
-        <ul>
-          <li><a href="/envios" title="Información sobre envíos">Envíos</a></li>
-          <li><a href="/devoluciones" title="Información sobre devoluciones">Devoluciones</a></li>
-          <li><a href="/faq" title="Preguntas frecuentes">Preguntas frecuentes</a></li>
-        </ul>
+        <p>Av. de Pio XII, 2, Valencia<br/>
+          Email: <a href="mailto:info@sportfashion.es">info@sportfashion.es</a>
+        </p>
       </div>
 
       <div class="footer-block">
         <h4>Legal</h4>
         <ul>
-          <li><a href="/terminos" title="Lee nuestros términos y condiciones">Términos y condiciones</a></li>
-          <li><a href="/privacidad" title="Consulta nuestra política de privacidad">Política de privacidad</a></li>
-          <li><a href="/cookies" title="Lee cómo usamos cookies en nuestro sitio">Política de cookies</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
         </ul>
       </div>
-
     </div>
 
     <div class="footer-bottom">
-      © 2025 Tienda de Ropa. Todos los derechos reservados.
+      © 2025 SportFashion. Todos los derechos reservados.
     </div>
   </footer>
 
+  <!-- Scripts -->
+  <script src="../js/nav.js"></script>
   <script src="../js/galeria.js"></script>
 </body>
 </html>

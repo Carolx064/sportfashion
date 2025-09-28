@@ -1,31 +1,44 @@
-// Crear el mapa
-var map = L.map('map');
+let options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
 
-// Capa base de OpenStreetMap
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(
+    success,
+    error,
+    options
+  );
+} else {
+  alert("Los servicios de geolocalización no están disponibles");
+}
 
-// Coordenadas de Valencia (Calle Colón)
-var valencia = [39.4702, -0.3768];
+function success(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
 
-// Coordenadas de Zaragoza (Calle Alfonso I)
-var zaragoza = [41.6540, -0.8805];
+  // Inicializar mapa centrado en la ubicación del usuario
+  let map = L.map('map', {
+    center: [latitude, longitude],
+    zoom: 14
+  });
 
-// Añadir marcadores
-L.marker(valencia).addTo(map)
-  .bindPopup("<b>Valencia</b><br>Calle Colón,27");
+  // Capa de OpenStreetMap
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
 
-L.marker(zaragoza).addTo(map)
-  .bindPopup("<b>Zaragoza</b><br>Calle Alfonso I,15");
+  // Control de ruta desde la posición del usuario hasta tu negocio
+  L.Routing.control({
+    waypoints: [
+      L.latLng(latitude, longitude),      
+      L.latLng(39.480523,-0.390642)          
+    ],
+    language: 'es'
+  }).addTo(map);
+}
 
-// Dibujar línea entre Valencia y Zaragoza
-var ruta = L.polyline([valencia, zaragoza], {
-  color: 'blue',     // Color de la línea
-  weight: 4,        // Grosor
-  opacity: 0.8,     // Transparencia
-  dashArray: '10,5' // Línea discontinua
-}).addTo(map);
-
-// Ajustar el mapa para mostrar todo
-map.fitBounds(ruta.getBounds());
+function error(err) {
+  alert("Error al obtener tu ubicación: " + err.message);
+}

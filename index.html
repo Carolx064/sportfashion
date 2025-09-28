@@ -4,294 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SportFashion</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <!-- Font Awesome para los íconos -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-    </style>
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-    <div class="menu-container">
-        <a href="#" class="logo">SportFashion</a>
-        <nav class="navbar">
-          <!--MENU DE NAVEGACIÓN-->
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="Views/productos.html">Productos</a></li>
-      <li><a href="Views/presupuesto.html">Presupuesto</a></li>
-      <li><a href="Views/contacto.html">Contacto</a></li>
-     <li><a href="Views/galeria.html">Galería</a></li>
-    </ul>
-    
-  <!--SUBMENU-->
 
-<div class="submenu">
-            <img src="imagenes/car.svg" id="img-carrito" alt="carrito">
-            <div id="carrito">
-                <table id="lista-carrito">
-                    <thead>
-                        <tr>
-                            <th>Imagen</th>
-                            <th>Nombre</th>
-                            <th>Precio</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
-            </div>
-        </div>
+<!-- HEADER -->
+<header class="header">
+  <div class="menu-container">
+    <a href="index.html" class="logo">
+      <img src="imagenes/logo.png" alt="Logo SportFashion">
+    </a>
+    <nav class="navbar" role="navigation" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="views/productos.html">Productos</a></li>
+        <li><a href="views/presupuesto.html">Presupuesto</a></li>
+        <li><a href="views/contacto.html">Contacto</a></li>
+        <li><a href="views/galeria.html">Galería</a></li>
+      </ul>
+    </nav>
+
+    <!-- SUBMENU CARRITO -->
+    <div class="submenu" tabindex="0">
+      <img src="imagenes/car.svg" id="img-carrito" alt="Carrito de compras">
+      <div id="carrito">
+          <table id="lista-carrito" aria-label="Contenido del carrito">
+              <thead>
+                  <tr>
+                      <th>Imagen</th>
+                      <th>Nombre</th>
+                      <th>Precio</th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody></tbody>
+          </table>
+          <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
+      </div>
     </div>
-<!--SECCION ESPECIAL-->
-    <div class="header-main container">
-        <div class="header-img">
-            <img src="imagenes/right.png" alt="">
-        </div>
-        <div class="header-txt">
-            <h1>Ofertas especiales</h1>
-            <p>Estrena las mejores prendas</p>
-            <a href="#" class="btn-1">Más Información</a>
-        </div>
-    </div>
+  </div>
+
+  <!-- SECCIÓN DESTACADA -->
+  <div class="header-main">
+      <div class="header-img">
+          <img src="imagenes/right.png" alt="Imagen destacada de productos en oferta">
+      </div>
+      <div class="header-txt">
+          <h1>Ofertas especiales</h1>
+          <p>Estrena las mejores prendas de la temporada.</p>
+          <a href="#" class="btn-1">Más Información</a>
+      </div>
+  </div>
 </header>
-   
-    <section class="ofert container">
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="imagenes/f1.png" alt="">
-             </div>  
-             <div class="ofert-txt">
-                <h3>Cinturón azul</h3>
-                <a href="#" class="btn-2">Mas Información</a>
-             </div>  
-        </div>
 
-
-        <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="imagenes/f2.png" alt="">
-             </div>  
-             <div class="ofert-txt">
-                <h3>Zapatilla Deportiva</h3>
-                <a href="#" class="btn-2">Mas Información</a>
-             </div>  
-        </div>
-
-         <div class="ofert-1">
-            <div class="ofert-img">
-                <img src="imagenes/f3.png" alt="">
-             </div>  
-             <div class="ofert-txt">
-                <h3>Bolso de marca</h3>
-                <a href="#" class="btn-2">Mas Información</a>
-             </div>  
-        </div>
-    </section>
-
-<!--PRODUCTOS-->
-
-<h2 class="titulo-productos">Productos</h2>
-
-
-<div class="product-content container">
-
-  <div class="product">
-    <img src="imagenes/1.png" alt="Polo azul" height="679" width="901">
-    <div class="product-txt">
-      <h3>Polo azul</h3>
-      <p>La mejor Calidad</p>
-      <p class="precio">67,25€</p>
-      <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
-    </div>
-  </div>
-
-  <div class="product">
-    <img src="imagenes/2.png" alt="Chaqueta Invierno" height="431" width="749">
-    <div class="product-txt">
-      <h3>Chaqueta Invierno</h3>
-      <p>Chaqueta para la montaña</p>
-      <p class="precio">39,99€</p>
-      <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar al carrito</a>
-    </div>
-  </div>
-
-  <div class="product">
-    <img src="imagenes/3.png" alt="Chaqueta Mujer" height="566" width="741">
-    <div class="product-txt">
-      <h3>Chaqueta Mujer</h3>
-      <p>Chaqueta de pelo para mujer</p>
-      <p class="precio">200€</p>
-      <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar al carrito</a>
-    </div>
-  </div>
-
-  <div class="product">
-    <img src="imagenes/4.png" alt="Polo azul" height="569" width="787">
-    <div class="product-txt">
-      <h3>Polo azul</h3>
-      <p>Calidad Premium</p>
-      <p class="precio">42,60€</p>
-      <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar al carrito</a>
-    </div>
-  </div>
-
-  <div class="product">
-    <img src="imagenes/5.png" alt="Camisa negra" height="569" width="759">
-    <div class="product-txt">
-      <h3>Camisa negra</h3>
-      <p>Calidad Premium</p>
-      <p class="precio">47,99€</p>
-      <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar al carrito</a>
-    </div>
-  </div>
-
-  <div class="product">
-    <img src="imagenes/6.png" alt="Albornoz" height="679" width="860">
-    <div class="product-txt">
-      <h3>Albornoz unisex</h3>
-      <p>Abrigo de estar en casa</p>
-      <p class="precio">200€</p>
-      <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito</a>
-    </div>
-  </div>
-</div>
-
-<!--ICONS-->
-
-<section class="icons">
-<div class="icon-1">
-    <div class="icon-img">
-        <img src="imagenes/i1.svg" alt="" height="48" width="48">
-    </div>
-    <div class="icon-txt">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    </div>
-</div>
-<div class="icon-2">
-    <div class="icon-img">
-        <img src="imagenes/i2.svg" alt="" height="48" width="48">
-    </div>
-    <div class="icon-txt">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    </div>
-</div>
-<div class="icon-3">
-    <div class="icon-img">
-        <img src="imagenes/i3.svg" alt="" height="48" width="48">
-    </div>
-    <div class="icon-txt">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    </div>
-</div>
-</section>
-<!--BLOGS-->
-<section class="blog container">
-<div class="blog-1">
-    <img src="imagenes/b1.jpg" alt="" height="5374" width="3583">
-    <h3>Blog 1</h3>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-         Quam totam inventore necessitatibus dicta tempore laborum saepe 
-         excepturi possimus ea iste et tenetur maxime quibusdam harum ad velit,
-          dignissimos voluptate consequuntur!</p>
-</div>
-<div class="blog-1">
-    <img src="imagenes/b2.jpg" alt="" height="5616" width="3744">
-    <h3>Blog 2</h3>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-         Quam totam inventore necessitatibus dicta tempore laborum saepe 
-         excepturi possimus ea iste et tenetur maxime quibusdam harum ad velit,
-          dignissimos voluptate consequuntur!</p>
-</div>
-<div class="blog-1">
-    <img src="imagenes/b3.jpg" alt="" height="6000" width="4000">
-    <h3>Blog 3</h3>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-         Quam totam inventore necessitatibus dicta tempore laborum saepe 
-         excepturi possimus ea iste et tenetur maxime quibusdam harum ad velit,
-          dignissimos voluptate consequuntur!</p>
-</div>
-</section>
-
-<!--Noticias Json-->
-
+<!-- NOTICIAS -->
 <section class="noticias-container">
-  <h2>Últimas Noticias</h2>
-  <div id="contenedor-noticias">
-    <p>Cargando noticias...</p>
-  </div>
+    <h2>Últimas Noticias</h2>
+    <div id="contenedor-noticias" role="status">
+        <p>Cargando noticias...</p>
+    </div>
 </section>
 
-<!--PIE DE PAGINA-->
+<!-- OFERTAS -->
+<section class="ofert">
+    <div class="ofert-1">
+        <div class="ofert-img"><img src="imagenes/f1.png" alt="Cinturón azul en oferta"></div>
+        <div class="ofert-txt">
+            <h3>Cinturón azul</h3>
+            <a href="#" class="btn-2">Más Información</a>
+        </div>
+    </div>
+
+    <div class="ofert-1">
+        <div class="ofert-img"><img src="imagenes/f2.png" alt="Zapatilla deportiva en oferta"></div>
+        <div class="ofert-txt">
+            <h3>Zapatilla Deportiva</h3>
+            <a href="#" class="btn-2">Más Información</a>
+        </div>
+    </div>
+
+    <div class="ofert-1">
+        <div class="ofert-img"><img src="imagenes/f3.png" alt="Bolso de marca en oferta"></div>
+        <div class="ofert-txt">
+            <h3>Bolso de marca</h3>
+            <a href="#" class="btn-2">Más Información</a>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTOS -->
+<h2 class="titulo-productos">Productos</h2>
+<div class="product-content">
+    <div class="product">
+        <img src="imagenes/1.png" alt="Polo azul de algodón">
+        <div class="product-txt">
+            <h3>Polo azul</h3>
+            <p>La mejor calidad</p>
+            <p class="precio">67,25€</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="1" aria-label="Agregar Polo azul al carrito">Agregar al carrito</a>
+        </div>
+    </div>
+    <div class="product">
+        <img src="imagenes/2.png" alt="Chaqueta de invierno para montaña">
+        <div class="product-txt">
+            <h3>Chaqueta Invierno</h3>
+            <p>Chaqueta para la montaña</p>
+            <p class="precio">39,99€</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="2" aria-label="Agregar Chaqueta Invierno al carrito">Agregar al carrito</a>
+        </div>
+    </div>
+    <div class="product">
+        <img src="imagenes/3.png" alt="Chaqueta de pelo para mujer">
+        <div class="product-txt">
+            <h3>Chaqueta Mujer</h3>
+            <p>Chaqueta de pelo para mujer</p>
+            <p class="precio">200€</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="3" aria-label="Agregar Chaqueta Mujer al carrito">Agregar al carrito</a>
+        </div>
+    </div>
+    <div class="product">
+        <img src="imagenes/4.png" alt="Polo azul premium">
+        <div class="product-txt">
+            <h3>Polo azul</h3>
+            <p>Calidad Premium</p>
+            <p class="precio">42,60€</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="4" aria-label="Agregar Polo azul Premium al carrito">Agregar al carrito</a>
+        </div>
+    </div>
+    <div class="product">
+        <img src="imagenes/5.png" alt="Camisa negra elegante">
+        <div class="product-txt">
+            <h3>Camisa negra</h3>
+            <p>Calidad Premium</p>
+            <p class="precio">47,99€</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="5" aria-label="Agregar Camisa negra al carrito">Agregar al carrito</a>
+        </div>
+    </div>
+    <div class="product">
+        <img src="imagenes/6.png" alt="Albornoz unisex de algodón">
+        <div class="product-txt">
+            <h3>Albornoz unisex</h3>
+            <p>Abrigo de estar en casa</p>
+            <p class="precio">200€</p>
+            <a href="#" class="agregar-carrito btn-2" data-id="6" aria-label="Agregar Albornoz unisex al carrito">Agregar al carrito</a>
+        </div>
+    </div>
+</div>
+
+<!-- ICONOS -->
+<section class="icons">
+    <div>
+        <img src="imagenes/i1.svg" alt="Envío rápido">
+        <p>Envíos rápidos y seguros a toda España.</p>
+    </div>
+    <div>
+        <img src="imagenes/i2.svg" alt="Pago seguro">
+        <p>Pagos 100% seguros con encriptación.</p>
+    </div>
+    <div>
+        <img src="imagenes/i3.svg" alt="Atención personalizada">
+        <p>Atención al cliente personalizada 24/7.</p>
+    </div>
+</section>
+
+<!-- BLOGS -->
+<section class="blog">
+    <div class="blog-1">
+        <img src="imagenes/b1.jpg" alt="Artículo de blog sobre tendencias de moda 2025">
+        <h3>Blog 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    </div>
+    <div class="blog-1">
+        <img src="imagenes/b2.jpg" alt="Guía de estilos deportivos">
+        <h3>Blog 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    </div>
+    <div class="blog-1">
+        <img src="imagenes/b3.jpg" alt="Consejos para elegir ropa deportiva">
+        <h3>Blog 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    </div>
+</section>
+
+<!-- PIE DE PAGINA -->
 <footer class="footer">
   <div class="footer-container">
-    
     <div class="footer-block">
-      <h3>Tienda de Ropa</h3>
+      <h3>SportFashion</h3>
       <p>Moda para todos los estilos. Descubre lo último en tendencias.</p>
     </div>
 
     <div class="footer-block">
       <h4>Enlaces</h4>
       <ul>
-        <li><a href="./index.html">Inicio</a></li>
-        <li><a href="./Views/productos.html">Catálogo</a></li>
-        <li><a href="./Views/galeria.html">Ofertas</a></li>
-        <li><a href="./Views/contacto.html">Contacto</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="views/productos.html">Productos</a></li>
+        <li><a href="views/galeria.html">Galería</a></li>
+        <li><a href="views/contacto.html">Contacto</a></li>
       </ul>
+    </div>
+
+    <div class="footer-block">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/?locale=es_ES" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="imagenes/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="imagenes/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://x.com/?lang=es" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <img src="imagenes/twitter.png" alt="X (Twitter)">
+          </a>
+        </div>
     </div>
 
     <div class="footer-block">
       <h4>Contacto</h4>
-      <p>Email: contacto@sportfashion.com</p>
-      <p>Tel: +34 657 456 789</p>
-    </div>
-
-    <div class="footer-block">
-      <h4>Síguenos</h4>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/?locale=es_ES"><img src="./imagenes/facebook.png" alt="Facebook"></a>
-        <a href="https://www.instagram.com/"><img src="./imagenes/instagram.png" alt="Instagram"></a>
-        <a href="https://x.com/?lang=es"><img src="./imagenes/twitter.png" alt="Twitter"></a>
-      </div>
-    </div>
-
-    <div class="footer-block">
-      <h4>Mi cuenta</h4>
-      <ul>
-        <li><a href="/perfil">Perfil</a></li>
-        <li><a href="/pedidos">Mis pedidos</a></li>
-        <li><a href="/favoritos">Favoritos</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-block">
-      <h4>Ayuda</h4>
-      <ul>
-        <li><a href="/envios">Envíos</a></li>
-        <li><a href="/devoluciones">Devoluciones</a></li>
-        <li><a href="/faq">Preguntas frecuentes</a></li>
-      </ul>
+      <p>Av. de Pio XII, 2, Valencia<br>Email: <a href="mailto:info@sportfashion.es">info@sportfashion.es</a></p>
     </div>
 
     <div class="footer-block">
       <h4>Legal</h4>
       <ul>
-        <li><a href="/terminos">Términos y condiciones</a></li>
-        <li><a href="/privacidad">Política de privacidad</a></li>
-        <li><a href="/cookies">Política de cookies</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
       </ul>
     </div>
-
   </div>
 
   <div class="footer-bottom">
-    © 2025 Tienda de Ropa. Todos los derechos reservados.
+    © 2025 SportFashion. Todos los derechos reservados.
   </div>
 </footer>
 
-    <script src="./js/script.js"></script>
+<script src="js/script.js"></script>
+<script src="js/nav.js"></script>
+
 </body>
 </html>

@@ -1,214 +1,277 @@
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f7f7f7;
+/* ==============================
+   Reset y fuentes
+============================== */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* HEADER */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fafafa;
+}
+
+/* ==============================
+   Header
+============================== */
 .header {
-  background: #222;
-  padding: 15px 20px;
+  background: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
 }
 
 .menu-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .logo {
-  font-size: 1.5rem;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+  flex: 1; 
+}
+
+.logo img {
+  max-width: 120px;
+}
+
+
+.navbar {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; 
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 20px;
 }
 
 .navbar a {
+  color: #6c36ff;
   text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.navbar a:hover {
-  color: #ff9800;
-}
-
+.navbar a:hover,
 .navbar a.active {
-  border-bottom: 2px solid #ff9800;
-  padding-bottom: 4px;
+  color: #6c36ff;
 }
 
-/*Ubicación*/
-
-#map {
-  height: 500px; 
-  width: 100%;   
-}
-
-/*CONTACTO*/ 
-.contacto-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
+/* ==============================
+   Sección contacto
+============================== */
+.contacto {
   max-width: 1200px;
-  margin: auto;
+  margin: 40px auto;
+  padding: 20px;
 }
 
 .contacto-info {
-  flex: 1 1 300px;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
 }
 
 .contacto-info h2 {
-  margin-bottom: 15px;
-  font-family: 'Oswald', sans-serif;
-  font-size: 28px;
+  font-size: 2rem;
+  margin-bottom: 10px;
   color: #111;
 }
 
 .contacto-info p {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  color: #555;
 }
 
 .contacto-info ul {
-  padding-left: 20px;
+  list-style: none;
 }
 
 .contacto-info li {
-  margin-bottom: 10px;
-  font-size: 15px;
+  margin: 8px 0;
+  font-size: 1rem;
 }
 
-.contacto-form {
-  flex: 1 1 400px;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+/* ==============================
+   Mapa
+============================== */
+#map {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.contacto-form form {
+/* ==============================
+   Formulario de contacto
+============================== */
+.form-contacto {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-contacto form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
-.contacto-form label {
-  margin-bottom: 5px;
+.form-contacto label {
   font-weight: 600;
+  color: #333;
 }
 
-.contacto-form input,
-.contacto-form textarea {
-  margin-bottom: 20px;
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
 }
 
-.contacto-form button {
-  padding: 12px;
-  background-color: #111;
-  color: white;
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  outline: none;
+  border-color: #ff4d4d;
+}
+
+.form-contacto button {
+  background: #ff4d4d;
+  color: #fff;
   border: none;
-  border-radius: 6px;
-  font-size: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s;
 }
 
-.contacto-form button:hover {
-  background-color: #333;
+.form-contacto button:hover {
+  background: #e63939;
 }
 
-/*FOOTER*/
-
+/* ==============================
+   Footer
+============================== */
 .footer {
-  background-color: #222;
-  color: #eee;
-  padding: 40px 20px 20px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+    background-color: var(--color-secundario);
+    padding: 2rem 0;
+    color: var(--color-texto);
+    margin-top: 3rem; 
 }
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 20px;
-}
-
-.footer-block {
-  flex: 1 1 150px;
-  min-width: 150px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-block h3, .footer-block h4 {
-  margin-bottom: 15px;
-  color: #fff;
+    margin-bottom: 1rem;
+    color: var(--color-principal);
 }
 
 .footer-block ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
 }
 
 .footer-block ul li {
-  margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
-.footer-block ul li a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.footer-block a {
+    text-decoration: none;
+    color: var(--color-texto);
+    transition: color 0.3s;
 }
 
-.footer-block ul li a:hover {
-  color: #fff;
-}
-
-.social-icons a img {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  vertical-align: middle;
-  transition: filter 0.3s ease;
-}
-
-.social-icons a:hover img {
-  filter: brightness(0.7) invert(1);
+.footer-block a:hover {
+    color: var(--color-principal);
 }
 
 .footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  border-top: 1px solid #444;
-  padding-top: 15px;
-  color: #888;
-  font-size: 13px;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #777;
 }
 
+/* ===============================
+   ICONOS REDES SOCIALES
+================================= */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
 
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s, background-color 0.3s;
+    background-color: var(--color-principal);
+}
 
+.social-icons a img {
+    width: 60%;
+    height: auto;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    background-color: #594fe2;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
 @media (max-width: 768px) {
-  .contacto-container {
-    flex-direction: column;
-    padding: 30px 15px;
-  }
+    .header-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .logo img {
+        height: 60px;
+        max-width: 160px;
+    }
+
+    .ofert {
+        flex-direction: column;
+    }
+
+    .icons {
+        flex-direction: column;
+    }
+
+    .product-content {
+        grid-template-columns: 1fr;
+    }
 }
